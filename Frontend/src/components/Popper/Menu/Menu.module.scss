@@ -1,6 +1,8 @@
 // Menu wrapper
 .menu-list {
     width: 224px;
+    position: relative;
+    z-index: 1000;
 
     .menu-item {
         margin-left: 0;
@@ -9,6 +11,8 @@
 
 .menu-popper {
     padding-bottom: 8px;
+    position: relative;
+    z-index: 1000;
 }
 
 .menu-body {
