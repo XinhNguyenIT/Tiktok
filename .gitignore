@@ -1,0 +1,38 @@
+# macOS
+.DS_Store
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# React build
+build/
+dist/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# VS Code
+.vscode/
+
+# Logs
+logs
+*.log
+
+# Backend bin/obj
+Backend/**/bin/
+Backend/**/obj/
+
+# .NET user files
+*.user
+*.suo
+
+# JetBrains
+.idea/
+
+# Coverage
+coverage/
