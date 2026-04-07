@@ -1,0 +1,32 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run update database",
+      "type": "shell",
+      "command": "dotnet ef database update",
+      "options": {
+        "cwd": "${workspaceFolder}/Backend"
+      },
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "Run Backend",
+      "type": "shell",
+      "command": "./Scripts/run_backend.sh",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "Pull new code",
+      "type": "shell",
+      "command": "./Scripts/pull_new_code.sh",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": "$msCompile"
+    }
+  ]
+}

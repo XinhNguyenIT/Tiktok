@@ -16,9 +16,6 @@ dist/
 .env.*
 !.env.example
 
-# VS Code
-.vscode/
-
 # Logs
 logs
 *.log
