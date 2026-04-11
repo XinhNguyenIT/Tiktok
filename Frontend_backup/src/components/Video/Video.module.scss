@@ -1,0 +1,38 @@
+/* Video.module.scss */
+
+.wrapper {
+    display: flex;
+    flex-direction: row; /* Xếp toàn bộ cụm Video và cụm Bình luận thành hàng dọc */
+    align-items: center; /* Căn giữa tất cả theo chiều ngang */
+    gap: 30px; /* Khoảng cách giữa cụm trên và bảng bình luận */
+    width: 100%;
+    padding-left: 60px;
+    margin-top: 20px;
+
+    // KHI CÓ COMMENT HIỆN RA
+    &.show-comment {
+        margin-left: -80px; // Chỉnh con số này cho đến khi sát sidebar
+        justify-content: flex-start;
+        margin-top: -10px;
+    }
+}
+
+.video-section {
+    display: flex;
+    flex-direction: row;
+    gap: 12px; /* Khoảng cách giữa video và dàn nút bấm */
+    top: 20px;
+}
+
+.comment-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    height: 550px;
+    background-color: #fff;
+    border: none; /* BỎ CÁI THANH/KHUNG Ở ĐÂY */
+    border-radius: 8px;
+    overflow: hidden;
+    position: sticky;
+}

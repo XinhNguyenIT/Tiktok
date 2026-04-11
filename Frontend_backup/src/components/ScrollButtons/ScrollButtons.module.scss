@@ -1,0 +1,34 @@
+/* Đảm bảo nút cuộn nằm chính giữa dọc bên phải màn hình */
+.wrapper {
+    position: fixed; /* Đảm bảo nút cuộn luôn ở vị trí cố định */
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%); /* Căn giữa chiều dọc */
+    z-index: 10; /* Đảm bảo nút cuộn có z-index thấp hơn menu */
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.btn {
+    width: 52px;
+    height: 52px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(22, 24, 35, 0.06);
+    color: #161823;
+    font-size: 2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        background: rgba(22, 24, 35, 0.12);
+    }
+}
+
+/* Ẩn nút cuộn khi lớp 'menu-open' được thêm vào body */
+:global(.menu-open) .scroll-buttons {
+    display: none; /* Ẩn nút cuộn khi menu mở */
+}

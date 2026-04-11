@@ -1,70 +1,169 @@
-# Getting Started with Create React App
+### ***XÂY DỰNG DỰ ÁN TIKTOK SỬ DỤNG REACTJS***
+<div style = "display : flex; align-items: center">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+</div>
+    <div style = "display : flex; align-items: center; margin-top:20px"> <img src="https://img.youtube.com/vi/42qhIclmeiI/mqdefault.jpg" alt="ts"/></div>
 
-In the project directory, you can run:
 
-### `npm start`
+### Package Support 
+>1. Create React App Webpack || Vite Flash [here](https://reactjs.org/)
+>2. Prettier Formatter Code Beautiful [here](https://prettier.io/)
+>3. SASS/SCSS [here](https://sass-lang.com/)
+>4. Reset CSS Normalize [here](https://necolas.github.io/normalize.css/)
+>5. React Router DOM [here](https://reactrouter.com/docs/en/v6/getting-started/overview)
+>5. Classnames [here](https://github.com/JedWatson/classnames)
+>6. Fontawesome [here](https://fontawesome.com/)
+>7. Babel [here](https://babeljs.io/)
+>8. Tippyjs React [here](https://github.com/atomiks/tippyjs-react)
+>9. Debounce [here](https://github.com/jgarber623/javascript-debounce)
+>10. Axios [here](https://github.com/axios/axios)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Remove React.FC from Typescript template
+[Create React App](https://github.com/facebook/create-react-app/pull/8177) Downsides to React.FC/React.FunctionComponent
+### Installation
+```bash
+$ npm install
+$ npm run dev
+$ npm run build
+```
+**Using Make**
+```bash
+$ make dev
+$ make build
+```
+### Git 
+```
+$ npx git-cz --allow-empty
+```
+### Docker
+```
+$ docker run -d -p 3000:3000 vite
+```
+### Debugger
+```js
+setTimeout(()=> {
+    debugger
+},3000)
+```
+### Structure Tree
+```
+root
+.
+└── src
+     ├── assets
+     ├── components
+     |      ├── AccountItem
+     │      │        ├── AccountItem.module.scss
+     │      │        └── AccountItem.tsx
+     │      │ 
+     │      ├── Button
+     │      │        ├── Button.module.scss
+     │      │        └── Button.tsx
+     │      │ 
+     │      ├── GlobalStyles
+     │      │        ├── GlobalStyles.scss
+     │      │        └── GlobalStyles.tsx
+     │      │ 
+     │      ├── Icons
+     │      │        └── Icon.tsx
+     │      │ 
+     │      ├── Image
+     │      │        ├── Image.module.scss
+     │      │        └── Image.tsx
+     │      │ 
+     │      ├── Popper
+     │      │      ├──Menu
+     │      │      │      ├── Header.tsx
+     │      │      │      ├── Menu.module.scss
+     │      │      │      ├── Menu.tsx
+     │      │      │      └── MenuItem.tsx
+     │      │      ├── Popper.module.scss
+     │      │      └── Wrapper.tsx
+     │      │
+     │      │
+     │      ├── SuggestedAccounts
+     │      │               ├── AccountPreview
+     │      │               │               ├── AccountPreview.module.scss        
+     │      │               │               └── AccountPreview.tsx
+     │      │               │ 
+     │      │               ├── SuggestedAccounts.module.scss
+     │      │               └── SuggestedAccounts.tsx
+     │      │
+     │      │
+     │      ├── Modal
+     │      │       ├── Modal.module.scss
+     │      │       └── Modal.tsx
+     │      │
+     │      │ 
+     │      └── Portal
+     │              └── Portal.tsx
+     │
+     │
+     │
+     │
+     │
+     │
+     │
+     │
+     │
+     │
+     │
+     ├── config
+     │      └── routes.ts
+     ├── data
+     │      └── language.ts
+     ├── hooks
+     │      └── useDebounce.ts  
+     ├── layouts
+     │      ├── components
+     │      │        ├── Header
+     │      │        │       ├── Header.module.scss
+     │      │        │       └── Header.tsx
+     │      │        ├── Search
+     │      │        │       ├── Search.module.scss
+     │      │        │       └── Search.tsx
+     │      │        └── Sidebar
+     │      │                ├── Menu
+     │      │                │      ├── Menu.module.scss
+     │      │                │      └── Menu.tsx
+     │      │                ├── Sidebar.module.scss 
+     │      │                └── Sidebar.tsx
+     │      │
+     │      ├── DefaultLayout
+     │      │           ├── DefaultLayout.module.scss
+     │      │           └── DefaultLayout.tsx
+     │      │
+     │      └── HeaderOnly
+     │                  └── HeaderOnly.tsx
+     │
+     ├── pages
+     │       ├── Following
+     │       │       └── Following.tsx
+     │       ├── Home
+     │       │       └── Home.tsx
+     │       ├── Live
+     │       │       └── Live.tsx
+     │       ├── Profile
+     │       │       └── Profile.tsx
+     │       ├── Search
+     │       │       └── Search.tsx
+     │       └── Upload
+     │               └── Upload.tsx
+     ├── routes
+     │       └── routes.ts
+     ├── services
+     │       └── searchService.ts
+     ├── types
+     ├── utils
+     │       └── httpRequest.ts
+     ├── App.tsx
+     ├── favicon.io
+     ├── main.tsx
+     └── vite-en.d.ts
 
-### `npm test`
+      │   ├──  └──
+```
+[https://tree.nathanfriend.io/](https://tree.nathanfriend.io/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

@@ -4,82 +4,102 @@
     justify-content: center;
     min-width: 100px;
     padding: 9px 16px;
-    border-radius: 4px;
-    font-size: 1.6rem;
-    font-weight: 700;
+    border-radius: 8px; // Threads dùng bo góc khoảng 8-10px
+    font-size: 1.5rem;   // Threads font hơi nhỏ và mảnh hơn
+    font-weight: 600;
     font-family: var(--font-family);
     cursor: pointer;
-    background-color: var(--white);
+    background-color: transparent;
     border: 1px solid transparent;
     user-select: none;
+    transition: all 0.2s ease;
 
-    + .wrapper {
-        margin-left: 8px;
+    // Khoảng cách giữa các nút cạnh nhau
+    & + .wrapper {
+        margin-left: 0;
     }
 
+    // Trạng thái vô hiệu hóa (Đưa ra ngoài để áp dụng cho mọi nút)
     &.disabled {
         pointer-events: none;
-        opacity: 0.5;
+        opacity: 0.4;
+        filter: grayscale(1);
     }
 }
 
-.icon + .title,
+// Xử lý Icon và Title
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    
+    & + .title {
+        margin-left: 8px;
+    }
+}
+
 .title + .icon {
     margin-left: 8px;
 }
 
-.icon {
-    display: inline-block;
-    width: 24px;
-    text-align: center;
-}
-
-// Button types
-.rounded {
-    border-radius: 999px;
-    box-shadow: 0 2px 8px rgb(0 0 0 / 6%);
-    border-color: rgba(22, 24, 35, 0.12);
-
-    &:hover {
-        border-color: rgba(22, 24, 35, 0.2);
-        background-color: rgba(22, 24, 35, 0.03);
-    }
-}
+// --- BUTTON TYPES (THREAD STYLE) ---
 
 .primary {
-    color: var(--white);
-    background-color: var(--primary);
-    border-color: var(--primary);
+    color: #fff;
+    background-color: #000; // Đen đặc trưng của Threads
+    border-color: #000;
 
     &:hover {
-        border-color: var(--primary);
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), #fe2c55;
+        background-color: #333; // Hiệu ứng tối hơn một chút
+        border-color: #333;
     }
 }
 
 .outline {
-    color: var(--primary);
-    border-color: currentColor;
+    color: #000;
+    border-color: rgba(0, 0, 0, 0.15); // Viền mảnh mờ
+    background-color: #fff;
 
     &:hover {
-        border-color: currentColor;
-        background-color: rgba(254, 44, 85, 0.06);
+        background-color: rgba(0, 0, 0, 0.05);
+        border-color: rgba(0, 0, 0, 0.3);
+    }
+}
+
+.rounded {
+    border-radius: 999px; // Bo tròn hoàn toàn (Nút Follow/Following)
+    border: 1px solid #dbdbdb;
+    padding: 0 16px;
+    min-width: 90px;
+    height: 34px;
+    font-size: 1.4rem;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.02);
     }
 }
 
 .text {
+    padding: 0;
+    min-width: auto;
+    color: rgba(0, 0, 0, 0.5); // Màu xám cho nút "Translate"
+
     &:hover {
         text-decoration: underline;
     }
 }
 
-// Button sizes
+// --- BUTTON SIZES ---
+
 .small {
-    min-width: 88px;
-    padding: 4px 16px;
+    min-width: 80px;
+    padding: 6px 12px;
+    font-size: 1.3rem;
 }
 
 .large {
-    padding: 14px 16px;
-    min-width: 140px;
+    min-width: 160px;
+    padding: 12px 24px;
+    font-size: 1.6rem;
 }
